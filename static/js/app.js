@@ -1,7 +1,7 @@
 
 // Build the metadata panel
 function buildMetadata(sample) {
-  d3.json("samples.json").then((data) => {
+  d3.json("https://static.bc-edx.com/data/dl-1-2/m14/lms/starter/samples.json").then((data) => {
       // get the metadata field
       var metadata = data.metadata;
       // Filter the metadata for the object with the desired sample number
@@ -25,7 +25,7 @@ function buildMetadata(sample) {
 
 // function to build both charts
 function buildCharts(sample) {
-  d3.json("samples.json").then((data) => {
+  d3.json("https://static.bc-edx.com/data/dl-1-2/m14/lms/starter/samples.json").then((data) => {
       // Get the samples field
       var samples = data.samples;
       // Filter the samples for the object with the desired sample number
@@ -116,7 +116,7 @@ buildGaugeChart(newSample);
 
 function init() {
   var selector = d3.select("#selDataset");
-  d3.json("samples.json").then((data) => {
+  d3.json("https://static.bc-edx.com/data/dl-1-2/m14/lms/starter/samples.json").then((data) => {
     var sampleNames = data.names;
 
     sampleNames.forEach((sample) => {
